@@ -1,11 +1,14 @@
 - Создаем папку front
 - yarn init (прописываем поля)
 - создаем папку src, в ней index.js и style.scss
-- Добавляем в package.json под main   
+- Добавляем в package.json под main 
+```  
   "scripts": {
     "build": "webpack --config webpack.js --progress --colors --mode=development"
   }
+```
 - создаем webpack.js, добавляем в него 
+```
 var path = require('path');
 var webpack = require('webpack');
 
@@ -40,11 +43,16 @@ module.exports = {
         ]
     },
 };
-- в style.scss добавляем 
+```
+- в style.scss добавляем
+```
 @import "~bootstrap/scss/bootstrap";
 @import "scss/default";
+```
 - создаем папку scss в ней файл default
 - создаем в папке src файл index.html, в него добавляем 
+```
 <script src="build/bundle.js"></script>
+```
 - делаем yarn run build
 - можно работать
