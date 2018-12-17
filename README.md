@@ -56,3 +56,7 @@ module.exports = {
 ```
 - делаем yarn run build
 - можно работать
+- для того чтобы webpack автоматически применял изменения добавляем в package.json:
+```
+"watch": "webpack --config webpack.js --mode development --watch"
+```
