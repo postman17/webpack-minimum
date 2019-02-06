@@ -61,7 +61,7 @@ module.exports = {
 @import "~bootstrap/scss/bootstrap";
 @import "scss/default";
 ```
-- создаем папку scss(в папке src) в ней файл default
+- создаем папку scss(в папке src) в ней файл default.scss
 - создаем в папке src файл index.html, в него добавляем 
 ```
 <script src="build/bundle.js"></script>
