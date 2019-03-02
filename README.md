@@ -1,3 +1,7 @@
+# Webpack minimum
+
+## Минимальная установка для верстки (css, sass, bootstrap)
+
 - Создаем папку front
 - yarn init (прописываем поля)
 - Устанавливаем webpack
@@ -77,3 +81,26 @@ module.exports = {
 yarn run watch
 ```
 И при изменении в файле default webpack будет автоматически собирать bundle.js
+
+***
+
+## Добавление плагинов
+
+### Jquery
+- Устанавливаем пакет
+```
+yarn add jquery
+```
+- Добавте в webpack.js(после вкладки module):
+```
+plugins: [
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery"
+    })
+]
+```
+- Для подключения jquery в нужном файле, добавте:
+```
+import $ from 'jquery';
+```
